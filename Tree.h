@@ -25,20 +25,11 @@ public:
     {
         if(!root)
         {
-            Node* root = new Node{data, nullptr, nullptr};
+            root = new Node{data, nullptr, nullptr};
         }
         else
         {
-            Node* temp = new Node{data, nullptr, nullptr};
-            if (temp == root)return;
-            if (temp->data > root->data)
-            {
-                root->right = temp;
-            }
-            if (temp->data < root->data)
-            {
-                root->left = temp;
-            }
+            root->insert(data);
         }
 
 
@@ -48,6 +39,7 @@ public:
     {
         if(!root)
         {
+            cout<<"vacio"<<endl;
             return;
         }
         else if(root)

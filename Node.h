@@ -29,7 +29,7 @@ struct Node
                 right = temp;
             }
         }
-        else if(datos<data)
+        if(datos<data)
         {
             if(this->left)
             {
@@ -49,10 +49,14 @@ struct Node
         {
             left->preorder();
         }
-        else if(!left)
-        {
+
+
             cout<<data<<" ";
-        }
+         if(right)
+            {
+                right->preorder();
+            }
+
 
     }
 };
