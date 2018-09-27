@@ -43,20 +43,42 @@ struct Node
         }
     }
 
-    void preorder()
+    void enorder()
     {
         if(left)
         {
-            left->preorder();
+            left->enorder();
         }
-
-
             cout<<data<<" ";
          if(right)
             {
-                right->preorder();
+                right->enorder();
             }
+    }
 
+    void preorder()
+    {
+        cout<<data<<" ";
+        if(left)
+        {
+          left->preorder();
+        }
+        if(right)
+        {
+          right->preorder();
+        }
 
+    }
+    void postorder()
+    {
+      if(left)
+      {
+        left->postorder();
+      }
+      if(right)
+      {
+        right->postorder();
+      }
+      cout<<data<<" ";
     }
 };

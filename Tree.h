@@ -46,6 +46,35 @@ public:
         {
             root->preorder();
         }
+        cout<<endl;
+
+    }
+    void enorder()
+    {
+        if(!root)
+        {
+            cout<<"vacio"<<endl;
+            return;
+        }
+        else if(root)
+        {
+            root->enorder();
+        }
+        cout<<endl;
+
+    }
+    void postorder()
+    {
+        if(!root)
+        {
+            cout<<"vacio"<<endl;
+            return;
+        }
+        else if(root)
+        {
+            root->postorder();
+        }
+        cout<<endl;
 
     }
 
