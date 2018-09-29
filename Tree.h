@@ -77,6 +77,10 @@ public:
         cout<<endl;
 
     }
+    void remove(int datos)
+    {
+        root->remove(datos, root);
+    }
 
 };
 

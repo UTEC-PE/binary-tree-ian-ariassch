@@ -81,4 +81,63 @@ struct Node
       }
       cout<<data<<" ";
     }
+    bool find(int datos, Node* nodo)
+    {
+        Node* temp = nodo;
+        while(datos != temp->data)
+        {
+            if(datos>temp->data)
+            {
+                if(temp->right)
+                {
+                    temp = temp->right;
+                }
+                else{cout<<"No esta"; return true;}
+            }
+            if(datos<temp->data)
+            {
+                if(temp->left)
+                {
+                    temp = temp->left;
+                }
+                else{cout<<"No esta";return false;}
+            }
+
+
+        } return true;
+
+    }
+    Node* remove(int datos, Node* nodo)
+    {
+        if(!nodo)
+        {
+            return nodo;
+        }
+        else if(datos>nodo->data){nodo->right->remove(datos, right);}
+        else if(datos<nodo->data){nodo->left->remove(datos, left);}
+        else
+        {
+            if(nodo->left == NULL and nodo->right == NULL)
+            {
+                nodo->data=NULL;
+                delete nodo;
+            }
+            else if(nodo->right == NULL)
+            {
+                Node* temp = nodo;
+                nodo = nodo->left;
+                temp->left = NULL;
+                delete temp;
+            }
+            else if(nodo->left == NULL)
+            {
+                Node* temp = nodo;
+                nodo = nodo->right;
+                temp->data = NULL;
+                delete temp;
+            }
+        }
+        return nodo;
+
+    }
 };
