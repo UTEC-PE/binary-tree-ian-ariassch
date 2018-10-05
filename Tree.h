@@ -8,7 +8,8 @@
 #include <lzma.h>
 #include "Node.h"
 
-class Tree
+class Tree // Tu árbol está bastante bien, pero pudiste haberme consultado para avanzar con el iterador
+// Sería bueno que de todas formas intentes implementar el iterador
 {
     Node *root;
 
@@ -81,6 +82,9 @@ public:
     {
         root->remove(datos, root);
     }
+
+    // Faltó la función peso
+    // Faltó el destructor
 
 };
 

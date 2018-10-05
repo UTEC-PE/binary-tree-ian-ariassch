@@ -5,4 +5,6 @@
 #ifndef BINARYTREE_ITERATOR_H
 #define BINARYTREE_ITERATOR_H
 
+// Faltó el iterador
+
 #endif //BINARYTREE_ITERATOR_H

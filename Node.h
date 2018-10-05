@@ -5,7 +5,7 @@
 #ifndef BINARYTREE_NODE_H
 #define BINARYTREE_NODE_H
 
-#endif //BINARYTREE_NODE_H
+#include <iostream>
 
 using namespace std;
 
@@ -119,7 +119,7 @@ struct Node
         {
             if(nodo->left == NULL and nodo->right == NULL)
             {
-                nodo->data=NULL;
+                nodo->data=NULL; // No deberías igualar T a null
                 delete nodo;
             }
             else if(nodo->right == NULL)
@@ -141,3 +141,5 @@ struct Node
 
     }
 };
+
+#endif //BINARYTREE_NODE_H
